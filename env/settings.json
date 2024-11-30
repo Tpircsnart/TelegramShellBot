@@ -1,0 +1,8 @@
+{
+    "token": "your-token",
+    "shell_location": "./commands/",
+    "line_button_count": 3,
+    "is_debug": true
+}
+
+
