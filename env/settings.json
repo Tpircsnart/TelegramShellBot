@@ -1,8 +1,6 @@
 {
-    "token": "your-token",
+    "token": "your-bot-token",
     "shell_location": "./commands/",
-    "line_button_count": 3,
-    "is_debug": true
+    "row_button_count": 3,
+    "isDebug": true
 }
-
-

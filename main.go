@@ -94,7 +94,7 @@ func init() {
 	if appSetting.Token == "" {
 		panic("token must be set")
 	}
-	if appSetting.LineButtonCount <= 0 {
+	if appSetting.RowButtonCount <= 0 {
 		panic("line button count must be set over 0")
 	}
 
@@ -145,7 +145,7 @@ func SetButtons() (err error) {
 	for i, v := range shellFiles {
 		appSetting.Buttons = append(appSetting.Buttons, v)
 		rowButtons = append(rowButtons, tgbotapi.NewKeyboardButton(v))
-		if (i+1)%appSetting.LineButtonCount == 0 || i+1 == shellFilesLen {
+		if (i+1)%appSetting.RowButtonCount == 0 || i+1 == shellFilesLen {
 			wholeButtons = append(wholeButtons, rowButtons)
 			rowButtons = []tgbotapi.KeyboardButton{}
 		}
