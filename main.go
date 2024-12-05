@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -76,7 +77,8 @@ func main() {
 		}
 
 		if len(msg.Text) > 4096 { // Telegram limit
-			msg.Text = "message too long"
+			fmt.Println("yes")
+			msg.Text = fmt.Sprintf("%s\n...\n...\n...\nOVER TELEGRAM TEXTSIZE", msg.Text[0:4000])
 		}
 
 		if _, err := bot.Send(msg); err != nil {
